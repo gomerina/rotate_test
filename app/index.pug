@@ -1,0 +1,353 @@
+doctype html
+html(lang="ru")
+    head
+        include includes/head
+        include includes/variables
+        title Титан Контрол
+    body 
+        include includes/header
+        main 
+            .main-screen 
+                video(src="video/video.mov" autoplay muted loop playsinline) 
+                .main-screen__content
+                    .container 
+                        .main-screen__top 
+                            h1 
+                                p ПЛК
+                                p Титан-1000
+                            p.main-screen__descr.lead Модульный ПЛК среднего класса, ориентированный <br> на системы автоматизации <span class="dash-item">в гражданском секторе</span>, а также на часть применений в <span class="dash-item">промышленности.</span>
+                        .main-screen__body 
+                            .main-screen__img 
+                                picture 
+                                    source(srcset="img/webp/main-screen.webp", type="image/webp")
+                                    img(src="img/main-screen.png", alt="")
+                            .main-screen__body-inner
+                                each item in mainItem
+                                    .main-item
+                                        .main-item__head
+                                            img(src=item.img, alt="")
+                                        .main-item__content
+                                            h4=item.name 
+                                            p=item.descr
+
+            .advantages 
+                .advantages__decor
+                    img(src="img/svg/advantages-decor.svg", alt="")
+                .container 
+                    .advantages__inner 
+                        h2 Ключевые преимущества системы
+                        .advantages__content
+                            each item in advantages
+                                .advantages-item
+                                    .advantages-item__head 
+                                        img(src=item.img, alt="")
+                                    .advantages-item__content
+                                        h4=item.name 
+                                        p!=item.descr
+                                        if(item.crumbs)
+                                            .crumbs.text-secondary
+                                                each crumb in item.crumbs 
+                                                    .crumbs__item 
+                                                        .crumbs__item-img 
+                                                            img(src=crumb.img, alt="")
+                                                        span=crumb.text
+
+            .head-module 
+                .container 
+                    h2 Головной вычислительный модуль
+                    .head-module__inner.text-secondary 
+                        .head-module__item.main
+                            .head-module__img 
+                                picture 
+                                    source(srcset="img/webp/head-module.webp", type="image/webp")
+                                    img(src="img/head-module.png", alt="")
+                        .head-module__item
+                            .head-module__img 
+                                img(src="img/svg/hm-1.svg", alt="")
+                            .head-module__text
+                                h4 ARMv8 CORTEX-A53
+                                p 64-бит, 4 ядра, ARMv8 Cortex-A53 1.2 ГГц
+                        .head-module__item
+                            .head-module__img 
+                                img(src="img/svg/hm-2.svg", alt="")
+                            .head-module__text
+                                h4 1ГБ SDRAM DDR3
+                                p 1333 МГц
+                        .head-module__item.row
+                            .head-module__img 
+                                img(src="img/svg/hm-3.svg", alt="")
+                            .head-module__text
+                                h5 Батарея для часов реального времени
+                                p при отключении питания
+                        .head-module__item.row
+                            .head-module__img 
+                                img(src="img/svg/hm-4.svg", alt="")
+                            .head-module__text
+                                h5 70х70х105мм
+                                p габариты устройства вычислительного модуля
+                        .head-module__item.row
+                            .head-module__img 
+                                img(src="img/svg/hm-5.svg", alt="")
+                            .head-module__text
+                                h5 Слот MicroSDHC
+                                p до 128 ГБ
+                        .head-module__item.row
+                            .head-module__img 
+                                img(src="img/svg/hm-6.svg", alt="")
+                            .head-module__text
+                                h5 Порт Ethernet
+                                p 10/100 Мбит, RJ45
+                        .head-module__item.row
+                            .head-module__img 
+                                img(src="img/svg/hm-7.svg", alt="")
+                            .head-module__text
+                                h5 Удобный монтаж
+                                p на DIN-рейку
+                        .head-module__item.row
+                            .head-module__img 
+                                img(src="img/svg/hm-8.svg", alt="")
+                            .head-module__text
+                                h5 Интерфейс
+                        .head-module__item.large
+                            .head-module__img 
+                                img(src="img/scada.png", alt="")
+                            .head-module__text
+                                p Web-сервер, управляемый по MasterScada 4D
+                        .head-module__item.row
+                            .head-module__img 
+                                img(src="img/svg/hm-9.svg", alt="")
+                            .head-module__text
+                                h5 Ионисторы
+                                p защита ПЛК от потери питания (например, в АВР)
+                        .head-module__item.row
+                            .head-module__img 
+                                img(src="img/svg/hm-10.svg", alt="")
+                            .head-module__text
+                                h5 Множество протоколов связи
+                                p более 10 видов
+                        
+                    .head-module__rotate 
+                        .rotate-item(data-path="img/rotate-1")
+                            h4 360°
+                            .rotate-item__img 
+                                img(src="img/rotate-1/1.png", alt="").jsSrc
+                            
+                                input(type="hidden", name="" data-min="1").min
+                                input(type="hidden", name="" data-max="12").max
+                            .slider
+                                
+
+                            
+
+            
+            
+            .scheme.text-secondary 
+                .scheme__bg
+                    img(src="img/svg/scheme-bg.svg", alt="")
+                .container 
+                    .scheme__img 
+                        .scheme__pic 
+                            picture 
+                                source(srcset="img/webp/scheme-img.webp", type="image/webp")
+                                img(src="img/scheme-img.png", alt="")
+                        .scheme__number.item-1 1
+                        .scheme__item.item-1
+                            .scheme__item-head
+                                .scheme__item-number 1
+                                h5 Разъём HDMI
+                        .scheme__number.item-2 2
+                        .scheme__item.item-2
+                            .scheme__item-head
+                                .scheme__item-number 2
+                                h5 PWR
+                            p.scheme__item-body Индикатор наличия питания
+                        .scheme__number.item-3 3
+                        .scheme__item.item-3
+                            .scheme__item-head
+                                .scheme__item-number 3
+                                h5 RUN CPU
+                            p.scheme__item-body Индикатор работы вычислительного модуля
+                        .scheme__number.item-4 4
+                        .scheme__item.item-4
+                            .scheme__item-head
+                                .scheme__item-number 4
+                                h5 RUN I/O
+                            p.scheme__item-body Индикатор работы модулей ввода-вывода
+                        .scheme__number.item-5 5
+                        .scheme__item.item-5
+                            .scheme__item-head
+                                .scheme__item-number 5
+                                h5 USER
+                            p.scheme__item-body Программируемый пользователем индикатор
+                        .scheme__number.item-6 6
+                        .scheme__item.item-6
+                            .scheme__item-head
+                                .scheme__item-number 6
+                                h5 Разъём Ethernet
+                        .scheme__number.item-7 7
+                        .scheme__item.item-7
+                            .scheme__item-head
+                                .scheme__item-number 7
+                                h5 Разъёмы USB
+
+                    
+            .list-block 
+                .container 
+                    .list-block__inner.text-secondary 
+                        each item in listBlock
+                            .list-block__col 
+                                if(item.default)
+                                    .list-block__item.jsTogglerItem
+                                        h4=item.name
+                                        ul 
+                                            each listItem in item.list
+                                                li=listItem 
+                                        button.btn.white.jsTogglerBtn 
+                                            span Подробнее
+                                            <svg width="16" height="9" viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M7.40234 8.34766L0.652344 1.59766C0.300781 1.28125 0.300781 0.753906 0.652344 0.402344C0.96875 0.0859375 1.49609 0.0859375 1.84766 0.402344L8 6.58984L14.1523 0.4375C14.4688 0.0859375 14.9961 0.0859375 15.3477 0.4375C15.6641 0.753906 15.6641 1.28125 15.3477 1.59766L8.5625 8.34766C8.24609 8.69922 7.71875 8.69922 7.40234 8.34766Z" fill="#314081"/>
+                                            </svg>
+                                else 
+                                    .list-block__item.col-count.jsTogglerItem
+                                        h4=item.name
+                                        ul 
+                                            each listItem in item.list
+                                                li=listItem  
+                                        button.btn.white.jsTogglerBtn 
+                                            span Подробнее
+                                            <svg width="16" height="9" viewBox="0 0 16 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M7.40234 8.34766L0.652344 1.59766C0.300781 1.28125 0.300781 0.753906 0.652344 0.402344C0.96875 0.0859375 1.49609 0.0859375 1.84766 0.402344L8 6.58984L14.1523 0.4375C14.4688 0.0859375 14.9961 0.0859375 15.3477 0.4375C15.6641 0.753906 15.6641 1.28125 15.3477 1.59766L8.5625 8.34766C8.24609 8.69922 7.71875 8.69922 7.40234 8.34766Z" fill="#314081"/>
+                                            </svg>
+
+            .signals 
+                .container
+                    h2 Модули ввода-вывода дискретных <br> и аналоговых сигналов
+                    .signals__inner.text-secondary
+                        .signals__item
+                            .signals__item-head
+                                img(src="img/svg/si-1.svg", alt="")
+                            h4 Программно-устраняемый дребезг контактов
+                        .signals__item
+                            .signals__item-head
+                                img(src="img/svg/si-2.svg", alt="")
+                            h4 Оптическая развязка
+                            p между каналами для защиты модулей
+                        .signals__item.main 
+                            picture 
+                                source(srcset="img/webp/signals-main@x2.webp", type="image/webp")
+                                img(src="img/signals-main@x2.jpg", alt="")
+                            .signals-main-content
+                                .signals__item-head
+                                    img(src="img/svg/si-3.svg", alt="")
+                                h4 70х105х15мм
+                                p компактные габариты модуля
+                        .signals__item.large
+                            .signals__item-head
+                                img(src="img/svg/si-4.svg", alt="")
+                            h4 10 типов сигналов
+                            .crumbs.flex
+                                .crumbs__item 
+                                    span 0–10 В DC
+                                .crumbs__item 
+                                    span 0(4)-20 мА
+                                .crumbs__item 
+                                    span Pt100
+                                .crumbs__item 
+                                    span Pt1000
+                                .crumbs__item 
+                                    span Ni1000
+                                .crumbs__item 
+                                    span и другие
+
+            .chars 
+                .container 
+                    h3 Технические характеристики модулей
+                    .chars__inner.text-secondary
+                        each item in chars
+                            .chars__col 
+                                .chars__item
+                                    .chars__item-head 
+                                        picture 
+                                            source(srcset=item.webp, type="image/webp")
+                                            img(src=item.img, alt="")
+                                    h4!=item.name 
+                                    table 
+                                        each tableItem in item.table 
+                                            tr 
+                                                td!=tableItem.name 
+                                                td
+                                                    b=tableItem.value
+            
+            .programm 
+                .container 
+                    .programm__head
+                        h2 Программное <br> обеспечение
+                        .programm__head-descr 
+                            .programm__head-img
+                                img(src="img/ph.png", alt="") 
+                            p Среда разработки Титан-1000–MasterPLC, ОСРВ, которая входит в экосистему MasterSCADA 4D. MasterSCADA - это пример 100% отечественного программного обеспечения.
+                    
+                    .programm__body
+                        each item in programms
+                            .programm__item
+                                .programm__item-head
+                                    h5=item.head 
+                                .programm__item-img 
+                                    picture 
+                                        source(srcset=item.webp, type="image/webp")
+                                        img(src=item.img, alt="")
+                    
+                    .programm__footer 
+                        .programm__item.large
+                            .programm__item-icon
+                                img(src="img/svg/pi-1.svg", alt="")
+                            h5 Среда и документация изначально на русском языке
+                        .programm__item.large
+                            .programm__item-icon
+                                img(src="img/svg/pi-2.svg", alt="")
+                            h5 Поддержка всех языков программирования МЭК 61131−3, а также C
+                        .programm__item.default
+                            .programm__item-icon
+                                img(src="img/svg/pi-3.svg", alt="")
+                            h5 Векторная <br> графика
+                        .programm__item.default
+                            .programm__item-icon
+                                img(src="img/svg/pi-4.svg", alt="")
+                            h5 Открытый <br> API
+
+                    .programm__item.scheme
+                        img(src="img/svg/p-main.svg", alt="")
+
+
+
+            .usage 
+                .container 
+                    .usage__box
+                        .usage__decor
+                            img(src="img/svg/usage-decor.svg", alt="")
+                        .usage__inner
+                            h2 Сфера применения
+                            .usage__content
+                                p ПЛК Титан-1000 имеет широкий спектр объектов применения в ЖКХ, строительстве, непроизводственных промышленных объектах, частично и на производстве.
+                                ul.usage__list 
+                                    each item in usage
+                                        li.usage__list-item
+                                            span.usage__list-img 
+                                                img(src=item.img, alt="")
+                                            span=item.descr
+
+            .house 
+                .container 
+                    h3 Отдельно стоит упомянуть про широкие возможности применения Титан-1000 в системах управления зданиями:
+                    .house__box
+                        h4 Технологические процессы
+                        .house__img
+                            img(src="img/svg/house.svg", alt="")
+
+                            
+                                
+                            
+        
+        
+        
+        include includes/footer

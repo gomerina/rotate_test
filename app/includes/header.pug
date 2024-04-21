@@ -1,0 +1,18 @@
+header.header
+    .container 
+        .header__inner 
+            a(href="#").header__logo
+                img(src="img/svg/logo.svg", alt="") 
+            ul.header__menu 
+                each item in ['Преимущества', 'Головной модуль', 'Модули ввода-вывода', 'ПО', 'Применение']
+                    li.header__menu-item 
+                        a(href="#").header__menu-link=item 
+            .header__contacts 
+                .header__contacts-item
+                    p.header__contacts-name Напишите нам
+                    p 
+                        a(href="mailto:info@mfmc.ru") info@mfmc.ru 
+                .header__contacts-item
+                    p.header__contacts-name По России бесплатно
+                    p 
+                        a(href="tel:+74951222262") +7 495 122-22-62
