@@ -8,14 +8,14 @@ html(lang="ru")
         include includes/header
         main 
             .main-screen 
-                video(src="video/video.mov" autoplay muted loop playsinline) 
+                video(src="video/video.mov" autoplay muted loop playsinline poster="img/poster.jpg") 
                 .main-screen__content
                     .container 
                         .main-screen__top 
                             h1 
-                                p ПЛК
-                                p Титан-1000
-                            p.main-screen__descr.lead Модульный ПЛК среднего класса, ориентированный <br> на системы автоматизации <span class="dash-item">в гражданском секторе</span>, а также на часть применений в <span class="dash-item">промышленности.</span>
+                                span ПЛК
+                                span Титан-1000
+                            p.main-screen__descr.lead Модульный ПЛК среднего класса, ориентированный <br> на системы автоматизации <span class="dash-item" data-popup="ЖКХ, водоканалы, аграрии, автоматизация зданий, включая BMS и др.">в гражданском секторе</span>, а также на часть применений в <span class="dash-item" data-popup="не основные технологические процессы">промышленности.</span>
                         .main-screen__body 
                             .main-screen__img 
                                 picture 
@@ -30,7 +30,7 @@ html(lang="ru")
                                             h4=item.name 
                                             p=item.descr
 
-            .advantages 
+            .advantages#advantages 
                 .advantages__decor
                     img(src="img/svg/advantages-decor.svg", alt="")
                 .container 
@@ -52,7 +52,7 @@ html(lang="ru")
                                                             img(src=crumb.img, alt="")
                                                         span=crumb.text
 
-            .head-module 
+            .head-module#headModule 
                 .container 
                     h2 Головной вычислительный модуль
                     .head-module__inner.text-secondary 
@@ -72,13 +72,13 @@ html(lang="ru")
                                 img(src="img/svg/hm-2.svg", alt="")
                             .head-module__text
                                 h4 1ГБ SDRAM DDR3
-                                p 1333 МГц
+                                p 1333 МГц
                         .head-module__item.row
                             .head-module__img 
                                 img(src="img/svg/hm-3.svg", alt="")
                             .head-module__text
-                                h5 Батарея для часов реального времени
-                                p при отключении питания
+                                h5 Батарея для часов реального времени
+                                p при отключении питания
                         .head-module__item.row
                             .head-module__img 
                                 img(src="img/svg/hm-4.svg", alt="")
@@ -90,19 +90,19 @@ html(lang="ru")
                                 img(src="img/svg/hm-5.svg", alt="")
                             .head-module__text
                                 h5 Слот MicroSDHC
-                                p до 128 ГБ
+                                p до 128 ГБ
                         .head-module__item.row
                             .head-module__img 
                                 img(src="img/svg/hm-6.svg", alt="")
                             .head-module__text
                                 h5 Порт Ethernet
-                                p 10/100 Мбит, RJ45
+                                p 10/100 Мбит, RJ45
                         .head-module__item.row
                             .head-module__img 
                                 img(src="img/svg/hm-7.svg", alt="")
                             .head-module__text
                                 h5 Удобный монтаж
-                                p на DIN-рейку
+                                p на DIN-рейку
                         .head-module__item.row
                             .head-module__img 
                                 img(src="img/svg/hm-8.svg", alt="")
@@ -112,35 +112,38 @@ html(lang="ru")
                             .head-module__img 
                                 img(src="img/scada.png", alt="")
                             .head-module__text
-                                p Web-сервер, управляемый по MasterScada 4D
+                                p Web-сервер, управляемый по MasterScada 4D
                         .head-module__item.row
                             .head-module__img 
                                 img(src="img/svg/hm-9.svg", alt="")
                             .head-module__text
                                 h5 Ионисторы
-                                p защита ПЛК от потери питания (например, в АВР)
+                                p защита ПЛК от потери питания (например, в АВР)
                         .head-module__item.row
                             .head-module__img 
                                 img(src="img/svg/hm-10.svg", alt="")
                             .head-module__text
                                 h5 Множество протоколов связи
-                                p более 10 видов
+                                p более 10 видов
                         
                     .head-module__rotate 
+                        .rotate-item(data-path="img/rotate-2")
+                            h4 360°
+                            .rotate-item__img 
+                                img(src="img/rotate-2/1.png", alt="").jsSrc
+                            
+                                input(type="hidden", data-min="1").min
+                                input(type="hidden", data-max="12").max
+                            .slider
                         .rotate-item(data-path="img/rotate-1")
                             h4 360°
                             .rotate-item__img 
                                 img(src="img/rotate-1/1.png", alt="").jsSrc
                             
-                                input(type="hidden", name="" data-min="1").min
-                                input(type="hidden", name="" data-max="12").max
+                                input(type="hidden", data-min="1").min
+                                input(type="hidden", data-max="12").max
                             .slider
-                                
-
-                            
-
-            
-            
+                        
             .scheme.text-secondary 
                 .scheme__bg
                     img(src="img/svg/scheme-bg.svg", alt="")
@@ -150,47 +153,93 @@ html(lang="ru")
                             picture 
                                 source(srcset="img/webp/scheme-img.webp", type="image/webp")
                                 img(src="img/scheme-img.png", alt="")
-                        .scheme__number.item-1 1
-                        .scheme__item.item-1
+                        .scheme__item-box
+                            .scheme__item.item-1
+                                .scheme__item-head
+                                    .scheme__item-number 1
+                                    h5 Разъём HDMI
+                            .scheme__number.item-1 1
+                        
+                        .scheme__item-box
+                            .scheme__item.item-2
+                                .scheme__item-head
+                                    .scheme__item-number 2
+                                    h5 PWR
+                                p.scheme__item-body Индикатор наличия питания
+                            .scheme__number.item-2 2
+                        
+                        .scheme__item-box
+                            .scheme__item.item-3
+                                .scheme__item-head
+                                    .scheme__item-number 3
+                                    h5 RUN CPU
+                                p.scheme__item-body Индикатор работы вычислительного модуля
+                            .scheme__number.item-3 3
+                        
+                        .scheme__item-box
+                            .scheme__item.item-4
+                                .scheme__item-head
+                                    .scheme__item-number 4
+                                    h5 RUN I/O
+                                p.scheme__item-body Индикатор работы модулей ввода-вывода
+                            .scheme__number.item-4 4
+                        .scheme__item-box
+                            .scheme__item.item-5
+                                .scheme__item-head
+                                    .scheme__item-number 5
+                                    h5 USER
+                                p.scheme__item-body Программируемый пользователем индикатор
+                            .scheme__number.item-5 5
+                        .scheme__item-box
+                            .scheme__item.item-6
+                                .scheme__item-head
+                                    .scheme__item-number 6
+                                    h5 Разъём Ethernet
+                            .scheme__number.item-6 6
+                        .scheme__item-box 
+                            .scheme__item.item-7
+                                .scheme__item-head
+                                    .scheme__item-number 7
+                                    h5 Разъёмы USB
+                            .scheme__number.item-7 7
+                        
+                    
+                    .scheme__mobile
+                        .scheme__item
                             .scheme__item-head
                                 .scheme__item-number 1
                                 h5 Разъём HDMI
-                        .scheme__number.item-2 2
-                        .scheme__item.item-2
+                        .scheme__item
                             .scheme__item-head
                                 .scheme__item-number 2
-                                h5 PWR
+                                h5 Разъём HDMI
                             p.scheme__item-body Индикатор наличия питания
-                        .scheme__number.item-3 3
-                        .scheme__item.item-3
+                        .scheme__item
                             .scheme__item-head
                                 .scheme__item-number 3
                                 h5 RUN CPU
                             p.scheme__item-body Индикатор работы вычислительного модуля
-                        .scheme__number.item-4 4
-                        .scheme__item.item-4
+                        .scheme__item
                             .scheme__item-head
                                 .scheme__item-number 4
                                 h5 RUN I/O
                             p.scheme__item-body Индикатор работы модулей ввода-вывода
-                        .scheme__number.item-5 5
-                        .scheme__item.item-5
+                        .scheme__item
                             .scheme__item-head
                                 .scheme__item-number 5
                                 h5 USER
                             p.scheme__item-body Программируемый пользователем индикатор
-                        .scheme__number.item-6 6
-                        .scheme__item.item-6
+                        .scheme__item
                             .scheme__item-head
                                 .scheme__item-number 6
                                 h5 Разъём Ethernet
-                        .scheme__number.item-7 7
-                        .scheme__item.item-7
+                        .scheme__item
                             .scheme__item-head
                                 .scheme__item-number 7
                                 h5 Разъёмы USB
-
-                    
+                            p.scheme__item-body Программируемый пользователем индикатор
+            
+            
             .list-block 
                 .container 
                     .list-block__inner.text-secondary 
@@ -219,7 +268,7 @@ html(lang="ru")
                                                 <path d="M7.40234 8.34766L0.652344 1.59766C0.300781 1.28125 0.300781 0.753906 0.652344 0.402344C0.96875 0.0859375 1.49609 0.0859375 1.84766 0.402344L8 6.58984L14.1523 0.4375C14.4688 0.0859375 14.9961 0.0859375 15.3477 0.4375C15.6641 0.753906 15.6641 1.28125 15.3477 1.59766L8.5625 8.34766C8.24609 8.69922 7.71875 8.69922 7.40234 8.34766Z" fill="#314081"/>
                                             </svg>
 
-            .signals 
+            .signals#signals 
                 .container
                     h2 Модули ввода-вывода дискретных <br> и аналоговых сигналов
                     .signals__inner.text-secondary
@@ -235,7 +284,7 @@ html(lang="ru")
                         .signals__item.main 
                             picture 
                                 source(srcset="img/webp/signals-main@x2.webp", type="image/webp")
-                                img(src="img/signals-main@x2.jpg", alt="")
+                                img(src="img/signals-main@x2.png", alt="")
                             .signals-main-content
                                 .signals__item-head
                                     img(src="img/svg/si-3.svg", alt="")
@@ -257,7 +306,7 @@ html(lang="ru")
                                 .crumbs__item 
                                     span Ni1000
                                 .crumbs__item 
-                                    span и другие
+                                    span и другие
 
             .chars 
                 .container 
@@ -278,10 +327,12 @@ html(lang="ru")
                                                 td
                                                     b=tableItem.value
             
-            .programm 
+            .programm#programm 
                 .container 
                     .programm__head
-                        h2 Программное <br> обеспечение
+                        h2 
+                            span Программное 
+                            span обеспечение
                         .programm__head-descr 
                             .programm__head-img
                                 img(src="img/ph.png", alt="") 
@@ -305,7 +356,7 @@ html(lang="ru")
                         .programm__item.large
                             .programm__item-icon
                                 img(src="img/svg/pi-2.svg", alt="")
-                            h5 Поддержка всех языков программирования МЭК 61131−3, а также C
+                            h5 Поддержка всех языков программирования МЭК 61131−3, а также C
                         .programm__item.default
                             .programm__item-icon
                                 img(src="img/svg/pi-3.svg", alt="")
@@ -318,9 +369,7 @@ html(lang="ru")
                     .programm__item.scheme
                         img(src="img/svg/p-main.svg", alt="")
 
-
-
-            .usage 
+            .usage#usage 
                 .container 
                     .usage__box
                         .usage__decor
@@ -342,12 +391,15 @@ html(lang="ru")
                     .house__box
                         h4 Технологические процессы
                         .house__img
-                            img(src="img/svg/house.svg", alt="")
-
-                            
-                                
-                            
-        
+                            picture 
+                                source(media="(max-width: 767px)", srcset="img/svg/house-mobile.svg")
+                                img(src="img/svg/house.svg", alt="")
+                        ul.house__mobile
+                            each item in houseMobile
+                                li.house__mobile-item 
+                                    span.house__mobile-img 
+                                        img(src=item.img, alt="")
+                                    span=item.text 
         
         
         include includes/footer

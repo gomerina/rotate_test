@@ -3,10 +3,27 @@ header.header
         .header__inner 
             a(href="#").header__logo
                 img(src="img/svg/logo.svg", alt="") 
-            ul.header__menu 
-                each item in ['Преимущества', 'Головной модуль', 'Модули ввода-вывода', 'ПО', 'Применение']
+            .header__menu-box
+                .mobile-menu-text Меню
+                ul.header__menu 
                     li.header__menu-item 
-                        a(href="#").header__menu-link=item 
+                        a(href='#advantages').header__menu-link.jsAnchorLink Преимущества
+                    li.header__menu-item 
+                        a(href='#headModule').header__menu-link.jsAnchorLink Головной модуль
+                    li.header__menu-item 
+                        a(href='#signals').header__menu-link.jsAnchorLink Модули ввода-вывода
+                    li.header__menu-item 
+                        a(href='#programm').header__menu-link.jsAnchorLink ПО
+                    li.header__menu-item 
+                        a(href='#usage').header__menu-link.jsAnchorLink Применение
+                .header__contacts-item.mobile
+                    p.header__contacts-name Напишите нам
+                    p 
+                        a(href="mailto:info@mfmc.ru") info@mfmc.ru 
+                .header__contacts-item.mobile
+                    p.header__contacts-name По России бесплатно
+                    p 
+                        a(href="tel:+74951222262") +7 495 122-22-62
             .header__contacts 
                 .header__contacts-item
                     p.header__contacts-name Напишите нам
@@ -16,3 +33,10 @@ header.header
                     p.header__contacts-name По России бесплатно
                     p 
                         a(href="tel:+74951222262") +7 495 122-22-62
+                
+                .burger 
+                    .burger__lines 
+                        span 
+                        span 
+                        span 
+                    span.burger__text Меню

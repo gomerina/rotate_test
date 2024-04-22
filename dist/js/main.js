@@ -42,8 +42,21 @@ $(document).ready(function () {
         });
     }
     sliders()
+
     $(document).on('click', '.jsTogglerBtn', function () {
         $(this).closest('.jsTogglerItem').addClass('active')
         $(this).remove();
+    })
+
+    $(document).on('click', '.burger', function () {
+        $('.header__menu-box, .burger').toggleClass('active')
+    })
+
+    $(document).on('click', '.jsAnchorLink', function () {
+        var anchor = $(this).attr('href');
+        $('html, body').animate({
+            scrollTop: $(anchor).offset().top - 80
+        }, 600);
+        return false;
     })
 })

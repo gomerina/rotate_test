@@ -16,23 +16,38 @@
 				<a class="header__logo" href="#">
 					<img src="img/svg/logo.svg" alt="">
 				</a>
-				<ul class="header__menu">
-					<li class="header__menu-item">
-						<a class="header__menu-link" href="#">Преимущества</a>
-					</li>
-					<li class="header__menu-item">
-						<a class="header__menu-link" href="#">Головной модуль</a>
-					</li>
-					<li class="header__menu-item">
-						<a class="header__menu-link" href="#">Модули ввода-вывода</a>
-					</li>
-					<li class="header__menu-item">
-						<a class="header__menu-link" href="#">ПО</a>
-					</li>
-					<li class="header__menu-item">
-						<a class="header__menu-link" href="#">Применение</a>
-					</li>
-				</ul>
+				<div class="header__menu-box">
+					<div class="mobile-menu-text">Меню</div>
+					<ul class="header__menu">
+						<li class="header__menu-item">
+							<a class="header__menu-link jsAnchorLink" href="#advantages">Преимущества</a>
+						</li>
+						<li class="header__menu-item">
+							<a class="header__menu-link jsAnchorLink" href="#headModule">Головной модуль</a>
+						</li>
+						<li class="header__menu-item">
+							<a class="header__menu-link jsAnchorLink" href="#signals">Модули ввода-вывода</a>
+						</li>
+						<li class="header__menu-item">
+							<a class="header__menu-link jsAnchorLink" href="#programm">ПО</a>
+						</li>
+						<li class="header__menu-item">
+							<a class="header__menu-link jsAnchorLink" href="#usage">Применение</a>
+						</li>
+					</ul>
+					<div class="header__contacts-item mobile">
+						<p class="header__contacts-name">Напишите нам</p>
+						<p>
+							<a href="mailto:info@mfmc.ru">info@mfmc.ru </a>
+						</p>
+					</div>
+					<div class="header__contacts-item mobile">
+						<p class="header__contacts-name">По России бесплатно</p>
+						<p>
+							<a href="tel:+74951222262">+7 495 122-22-62</a>
+						</p>
+					</div>
+				</div>
 				<div class="header__contacts">
 					<div class="header__contacts-item">
 						<p class="header__contacts-name">Напишите нам</p>
@@ -46,22 +61,30 @@
 							<a href="tel:+74951222262">+7 495 122-22-62</a>
 						</p>
 					</div>
+					<div class="burger">
+						<div class="burger__lines">
+							<span> </span>
+							<span> </span>
+							<span> </span>
+						</div>
+						<span class="burger__text">Меню</span>
+					</div>
 				</div>
 			</div>
 		</div>
 	</header>
 	<main>
 		<div class="main-screen">
-			<video src="video/video.mov" autoplay muted loop playsinline> </video>
+			<video src="video/video.mov" autoplay muted loop playsinline poster="img/poster.jpg"> </video>
 			<div class="main-screen__content">
 				<div class="container">
 					<div class="main-screen__top">
 						<h1>
-							<p>ПЛК</p>
-							<p>Титан-1000</p>
+							<span>ПЛК</span>
+							<span>Титан-1000</span>
 						</h1>
 						<p class="main-screen__descr lead">Модульный ПЛК среднего класса, ориентированный
-							<br> на системы автоматизации <span class="dash-item">в гражданском секторе</span>, а также на часть применений в <span class="dash-item">промышленности.</span>
+							<br> на системы автоматизации <span class="dash-item" data-popup="ЖКХ, водоканалы, аграрии, автоматизация зданий, включая BMS и др.">в гражданском секторе</span>, а также на часть применений в <span class="dash-item" data-popup="не основные технологические процессы">промышленности.</span>
 						</p>
 					</div>
 					<div class="main-screen__body">
@@ -77,8 +100,8 @@
 									<img src="img/svg/m-1.svg" alt="">
 								</div>
 								<div class="main-item__content">
-									<h4>ARMv8 Cortex-A53</h4>
-									<p>64-бит, 4 ядра, 1.2 ГГц</p>
+									<h4>ARMv8 Cortex-A53</h4>
+									<p>64-бит, 4 ядра, 1.2 ГГц</p>
 								</div>
 							</div>
 							<div class="main-item">
@@ -87,7 +110,7 @@
 								</div>
 								<div class="main-item__content">
 									<h4>1ГБ SDRAM DDR3</h4>
-									<p>1333 МГц</p>
+									<p>1333 МГц</p>
 								</div>
 							</div>
 							<div class="main-item">
@@ -95,8 +118,8 @@
 									<img src="img/svg/m-3.svg" alt="">
 								</div>
 								<div class="main-item__content">
-									<h4>12 Типов сигналов</h4>
-									<p>DI(PNP/NPN), DO(PNP/NPN), AI(PT100/РТ1000) и другие</p>
+									<h4>12 Типов сигналов</h4>
+									<p>DI(PNP/NPN), DO(PNP/NPN), AI(PT100/РТ1000) и другие</p>
 								</div>
 							</div>
 							<div class="main-item">
@@ -105,7 +128,7 @@
 								</div>
 								<div class="main-item__content">
 									<h4>Множество протоколов</h4>
-									<p>Протоколы MODBUS TCP/RTU, Profinet, МЭК104, BACnet IP, PowerLink и другие;</p>
+									<p>Протоколы MODBUS TCP/RTU, Profinet, МЭК104, BACnet IP, PowerLink и другие;</p>
 								</div>
 							</div>
 						</div>
@@ -113,7 +136,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="advantages">
+		<div class="advantages" id="advantages">
 			<div class="advantages__decor">
 				<img src="img/svg/advantages-decor.svg" alt="">
 			</div>
@@ -126,9 +149,9 @@
 								<img src="img/svg/a-1.svg" alt="">
 							</div>
 							<div class="advantages-item__content">
-								<h4>100% разработка и производство в РФ</h4>
+								<h4>100% разработка и производство в РФ</h4>
 								<p>Поддержка отечественного
-									<br> ПО (MasterSCADA)
+									<br> ПО (MasterSCADA)
 								</p>
 							</div>
 						</div>
@@ -137,8 +160,8 @@
 								<img src="img/svg/a-3.svg" alt="">
 							</div>
 							<div class="advantages-item__content">
-								<h4>15 Лет опыта</h4>
-								<p>Внедрений лучших мировых контроллеров воплощены в ПЛК Титан</p>
+								<h4>15 Лет опыта</h4>
+								<p>Внедрений лучших мировых контроллеров воплощены в ПЛК Титан</p>
 							</div>
 						</div>
 						<div class="advantages-item">
@@ -147,19 +170,19 @@
 							</div>
 							<div class="advantages-item__content">
 								<h4>Надёжность</h4>
-								<p>Высокотехнологичное производство и контроль качества</p>
+								<p>Высокотехнологичное производство и контроль качества</p>
 								<div class="crumbs text-secondary">
 									<div class="crumbs__item">
 										<div class="crumbs__item-img">
 											<img src="img/svg/c-3.svg" alt="">
 										</div>
-										<span>5 лет гарантии</span>
+										<span>5 лет гарантии</span>
 									</div>
 									<div class="crumbs__item">
 										<div class="crumbs__item-img">
 											<img src="img/svg/c-4.svg" alt="">
 										</div>
-										<span>15 лет срок службы</span>
+										<span>15 лет срок службы</span>
 									</div>
 								</div>
 							</div>
@@ -170,19 +193,19 @@
 							</div>
 							<div class="advantages-item__content">
 								<h4>Гибкость</h4>
-								<p>До 32 модулей (256 точек) на 1 корзину ввода-вывода, до 15 корзин в системе</p>
+								<p>До 32 модулей (256 точек) на 1 корзину ввода-вывода, до 15 корзин в системе</p>
 								<div class="crumbs text-secondary">
 									<div class="crumbs__item">
 										<div class="crumbs__item-img">
 											<img src="img/svg/c-1.svg" alt="">
 										</div>
-										<span>10 типов сигналов</span>
+										<span>10 типов сигналов</span>
 									</div>
 									<div class="crumbs__item">
 										<div class="crumbs__item-img">
 											<img src="img/svg/c-2.svg" alt="">
 										</div>
-										<span>&gt; 10 видов протоколов связи</span>
+										<span>&gt; 10 видов протоколов связи</span>
 									</div>
 								</div>
 							</div>
@@ -193,14 +216,14 @@
 							</div>
 							<div class="advantages-item__content">
 								<h4>Скорость</h4>
-								<p>Режим реального времени до 3840 точек на проект. Параллельный опрос корзин, быстрая межмодульная шина CAN, автоматическая адресация модулей</p>
+								<p>Режим реального времени до 3840 точек на проект. Параллельный опрос корзин, быстрая межмодульная шина CAN, автоматическая адресация модулей</p>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="head-module">
+		<div class="head-module" id="headModule">
 			<div class="container">
 				<h2>Головной вычислительный модуль</h2>
 				<div class="head-module__inner text-secondary">
@@ -227,7 +250,7 @@
 						</div>
 						<div class="head-module__text">
 							<h4>1ГБ SDRAM DDR3</h4>
-							<p>1333 МГц</p>
+							<p>1333 МГц</p>
 						</div>
 					</div>
 					<div class="head-module__item row">
@@ -235,8 +258,8 @@
 							<img src="img/svg/hm-3.svg" alt="">
 						</div>
 						<div class="head-module__text">
-							<h5>Батарея для часов реального времени</h5>
-							<p>при отключении питания</p>
+							<h5>Батарея для часов реального времени</h5>
+							<p>при отключении питания</p>
 						</div>
 					</div>
 					<div class="head-module__item row">
@@ -254,7 +277,7 @@
 						</div>
 						<div class="head-module__text">
 							<h5>Слот MicroSDHC</h5>
-							<p>до 128 ГБ</p>
+							<p>до 128 ГБ</p>
 						</div>
 					</div>
 					<div class="head-module__item row">
@@ -263,7 +286,7 @@
 						</div>
 						<div class="head-module__text">
 							<h5>Порт Ethernet</h5>
-							<p>10/100 Мбит, RJ45</p>
+							<p>10/100 Мбит, RJ45</p>
 						</div>
 					</div>
 					<div class="head-module__item row">
@@ -272,7 +295,7 @@
 						</div>
 						<div class="head-module__text">
 							<h5>Удобный монтаж</h5>
-							<p>на DIN-рейку</p>
+							<p>на DIN-рейку</p>
 						</div>
 					</div>
 					<div class="head-module__item row">
@@ -288,7 +311,7 @@
 							<img src="img/scada.png" alt="">
 						</div>
 						<div class="head-module__text">
-							<p>Web-сервер, управляемый по MasterScada 4D</p>
+							<p>Web-сервер, управляемый по MasterScada 4D</p>
 						</div>
 					</div>
 					<div class="head-module__item row">
@@ -297,7 +320,7 @@
 						</div>
 						<div class="head-module__text">
 							<h5>Ионисторы</h5>
-							<p>защита ПЛК от потери питания (например, в АВР)</p>
+							<p>защита ПЛК от потери питания (например, в АВР)</p>
 						</div>
 					</div>
 					<div class="head-module__item row">
@@ -306,17 +329,26 @@
 						</div>
 						<div class="head-module__text">
 							<h5>Множество протоколов связи</h5>
-							<p>более 10 видов</p>
+							<p>более 10 видов</p>
 						</div>
 					</div>
 				</div>
 				<div class="head-module__rotate">
+					<div class="rotate-item" data-path="img/rotate-2">
+						<h4>360°</h4>
+						<div class="rotate-item__img">
+							<img class="jsSrc" src="img/rotate-2/1.png" alt="">
+							<input class="min" type="hidden" data-min="1">
+							<input class="max" type="hidden" data-max="12">
+						</div>
+						<div class="slider"></div>
+					</div>
 					<div class="rotate-item" data-path="img/rotate-1">
 						<h4>360°</h4>
 						<div class="rotate-item__img">
 							<img class="jsSrc" src="img/rotate-1/1.png" alt="">
-							<input class="min" type="hidden" name="" data-min="1">
-							<input class="max" type="hidden" name="" data-max="12">
+							<input class="min" type="hidden" data-min="1">
+							<input class="max" type="hidden" data-max="12">
 						</div>
 						<div class="slider"></div>
 					</div>
@@ -335,58 +367,121 @@
 							<img src="img/scheme-img.png" alt="">
 						</picture>
 					</div>
-					<div class="scheme__number item-1">1</div>
-					<div class="scheme__item item-1">
+					<div class="scheme__item-box">
+						<div class="scheme__item item-1">
+							<div class="scheme__item-head">
+								<div class="scheme__item-number">1</div>
+								<h5>Разъём HDMI</h5>
+							</div>
+						</div>
+						<div class="scheme__number item-1">1</div>
+					</div>
+					<div class="scheme__item-box">
+						<div class="scheme__item item-2">
+							<div class="scheme__item-head">
+								<div class="scheme__item-number">2</div>
+								<h5>PWR</h5>
+							</div>
+							<p class="scheme__item-body">Индикатор наличия питания</p>
+						</div>
+						<div class="scheme__number item-2">2</div>
+					</div>
+					<div class="scheme__item-box">
+						<div class="scheme__item item-3">
+							<div class="scheme__item-head">
+								<div class="scheme__item-number">3</div>
+								<h5>RUN CPU</h5>
+							</div>
+							<p class="scheme__item-body">Индикатор работы вычислительного модуля</p>
+						</div>
+						<div class="scheme__number item-3">3</div>
+					</div>
+					<div class="scheme__item-box">
+						<div class="scheme__item item-4">
+							<div class="scheme__item-head">
+								<div class="scheme__item-number">4</div>
+								<h5>RUN I/O</h5>
+							</div>
+							<p class="scheme__item-body">Индикатор работы модулей ввода-вывода</p>
+						</div>
+						<div class="scheme__number item-4">4</div>
+					</div>
+					<div class="scheme__item-box">
+						<div class="scheme__item item-5">
+							<div class="scheme__item-head">
+								<div class="scheme__item-number">5</div>
+								<h5>USER</h5>
+							</div>
+							<p class="scheme__item-body">Программируемый пользователем индикатор</p>
+						</div>
+						<div class="scheme__number item-5">5</div>
+					</div>
+					<div class="scheme__item-box">
+						<div class="scheme__item item-6">
+							<div class="scheme__item-head">
+								<div class="scheme__item-number">6</div>
+								<h5>Разъём Ethernet</h5>
+							</div>
+						</div>
+						<div class="scheme__number item-6">6</div>
+					</div>
+					<div class="scheme__item-box">
+						<div class="scheme__item item-7">
+							<div class="scheme__item-head">
+								<div class="scheme__item-number">7</div>
+								<h5>Разъёмы USB</h5>
+							</div>
+						</div>
+						<div class="scheme__number item-7">7</div>
+					</div>
+				</div>
+				<div class="scheme__mobile">
+					<div class="scheme__item">
 						<div class="scheme__item-head">
 							<div class="scheme__item-number">1</div>
 							<h5>Разъём HDMI</h5>
 						</div>
 					</div>
-					<div class="scheme__number item-2">2</div>
-					<div class="scheme__item item-2">
+					<div class="scheme__item">
 						<div class="scheme__item-head">
 							<div class="scheme__item-number">2</div>
-							<h5>PWR</h5>
+							<h5>Разъём HDMI</h5>
 						</div>
 						<p class="scheme__item-body">Индикатор наличия питания</p>
 					</div>
-					<div class="scheme__number item-3">3</div>
-					<div class="scheme__item item-3">
+					<div class="scheme__item">
 						<div class="scheme__item-head">
 							<div class="scheme__item-number">3</div>
 							<h5>RUN CPU</h5>
 						</div>
 						<p class="scheme__item-body">Индикатор работы вычислительного модуля</p>
 					</div>
-					<div class="scheme__number item-4">4</div>
-					<div class="scheme__item item-4">
+					<div class="scheme__item">
 						<div class="scheme__item-head">
 							<div class="scheme__item-number">4</div>
 							<h5>RUN I/O</h5>
 						</div>
 						<p class="scheme__item-body">Индикатор работы модулей ввода-вывода</p>
 					</div>
-					<div class="scheme__number item-5">5</div>
-					<div class="scheme__item item-5">
+					<div class="scheme__item">
 						<div class="scheme__item-head">
 							<div class="scheme__item-number">5</div>
 							<h5>USER</h5>
 						</div>
 						<p class="scheme__item-body">Программируемый пользователем индикатор</p>
 					</div>
-					<div class="scheme__number item-6">6</div>
-					<div class="scheme__item item-6">
+					<div class="scheme__item">
 						<div class="scheme__item-head">
 							<div class="scheme__item-number">6</div>
 							<h5>Разъём Ethernet</h5>
 						</div>
 					</div>
-					<div class="scheme__number item-7">7</div>
-					<div class="scheme__item item-7">
+					<div class="scheme__item">
 						<div class="scheme__item-head">
 							<div class="scheme__item-number">7</div>
 							<h5>Разъёмы USB</h5>
 						</div>
+						<p class="scheme__item-body">Программируемый пользователем индикатор</p>
 					</div>
 				</div>
 			</div>
@@ -416,7 +511,7 @@
 					</div>
 					<div class="list-block__col">
 						<div class="list-block__item col-count jsTogglerItem">
-							<h4>ПЛК ТИТАН поддерживает различные протоколы связи</h4>
+							<h4>ПЛК ТИТАН поддерживает различные протоколы связи</h4>
 							<ul>
 								<li>Протокол FINS для оборудования Omron</li>
 								<li>Протокол SLMP для оборудования Mitsubishi</li>
@@ -450,7 +545,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="signals">
+		<div class="signals" id="signals">
 			<div class="container">
 				<h2>Модули ввода-вывода дискретных
 					<br> и аналоговых сигналов
@@ -472,7 +567,7 @@
 					<div class="signals__item main">
 						<picture>
 							<source srcset="img/webp/signals-main@x2.webp" type="image/webp">
-							<img src="img/signals-main@x2.jpg" alt="">
+							<img src="img/signals-main@x2.png" alt="">
 						</picture>
 						<div class="signals-main-content">
 							<div class="signals__item-head">
@@ -504,7 +599,7 @@
 								<span>Ni1000</span>
 							</div>
 							<div class="crumbs__item">
-								<span>и другие</span>
+								<span>и другие</span>
 							</div>
 						</div>
 					</div>
@@ -579,7 +674,7 @@
 								<tr>
 									<td>Напряжение гальванической изоляции, канал-шина</td>
 									<td>
-										<b>500 В</b>
+										<b>500 В</b>
 									</td>
 								</tr>
 							</table>
@@ -612,13 +707,13 @@
 									</td>
 								</tr>
 								<tr>
-									<td>Потребление модуля по шине 5В</td>
+									<td>Потребление модуля по шине 5В</td>
 									<td>
 										<b>не более 1 Вт</b>
 									</td>
 								</tr>
 								<tr>
-									<td>Потребление модуля по шине 24В</td>
+									<td>Потребление модуля по шине 24В</td>
 									<td>
 										<b>не более 8 Вт</b>
 									</td>
@@ -651,9 +746,9 @@
 									</td>
 								</tr>
 								<tr>
-									<td>Номинальный выходной ток на канал</td>
+									<td>Номинальный выходной ток на канал</td>
 									<td>
-										<b>0,5 А</b>
+										<b>0,5 А</b>
 									</td>
 								</tr>
 							</table>
@@ -662,11 +757,12 @@
 				</div>
 			</div>
 		</div>
-		<div class="programm">
+		<div class="programm" id="programm">
 			<div class="container">
 				<div class="programm__head">
-					<h2>Программное
-						<br> обеспечение
+					<h2>
+						<span>Программное </span>
+						<span>обеспечение</span>
 					</h2>
 					<div class="programm__head-descr">
 						<div class="programm__head-img">
@@ -721,7 +817,7 @@
 						<div class="programm__item-icon">
 							<img src="img/svg/pi-2.svg" alt="">
 						</div>
-						<h5>Поддержка всех языков программирования МЭК 61131−3, а также C</h5>
+						<h5>Поддержка всех языков программирования МЭК 61131−3, а также C</h5>
 					</div>
 					<div class="programm__item default">
 						<div class="programm__item-icon">
@@ -745,7 +841,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="usage">
+		<div class="usage" id="usage">
 			<div class="container">
 				<div class="usage__box">
 					<div class="usage__decor">
@@ -846,8 +942,91 @@
 				<div class="house__box">
 					<h4>Технологические процессы</h4>
 					<div class="house__img">
-						<img src="img/svg/house.svg" alt="">
+						<picture>
+							<source media="(max-width: 767px)" srcset="img/svg/house-mobile.svg">
+							<img src="img/svg/house.svg" alt="">
+						</picture>
 					</div>
+					<ul class="house__mobile">
+						<li class="house__mobile-item">
+							<span class="house__mobile-img">
+								<img src="img/svg/hsm-1.svg" alt="">
+							</span>
+							<span>Вентиляция</span>
+						</li>
+						<li class="house__mobile-item">
+							<span class="house__mobile-img">
+								<img src="img/svg/hsm-2.svg" alt="">
+							</span>
+							<span>Бесперебойное питание</span>
+						</li>
+						<li class="house__mobile-item">
+							<span class="house__mobile-img">
+								<img src="img/svg/hsm-3.svg" alt="">
+							</span>
+							<span>Кондиционирование и холодоснабжение</span>
+						</li>
+						<li class="house__mobile-item">
+							<span class="house__mobile-img">
+								<img src="img/svg/hsm-4.svg" alt="">
+							</span>
+							<span>IT оборудование</span>
+						</li>
+						<li class="house__mobile-item">
+							<span class="house__mobile-img">
+								<img src="img/svg/hsm-5.svg" alt="">
+							</span>
+							<span>Учёт ресурсов (АСКУЭ, АСТУЭР)</span>
+						</li>
+						<li class="house__mobile-item">
+							<span class="house__mobile-img">
+								<img src="img/svg/hsm-6.svg" alt="">
+							</span>
+							<span>Контроль параметров среды</span>
+						</li>
+						<li class="house__mobile-item">
+							<span class="house__mobile-img">
+								<img src="img/svg/hsm-7.svg" alt="">
+							</span>
+							<span>АУПТ</span>
+						</li>
+						<li class="house__mobile-item">
+							<span class="house__mobile-img">
+								<img src="img/svg/hsm-8.svg" alt="">
+							</span>
+							<span>Интеграция с BIM</span>
+						</li>
+						<li class="house__mobile-item">
+							<span class="house__mobile-img">
+								<img src="img/svg/hsm-9.svg" alt="">
+							</span>
+							<span>Освещение</span>
+						</li>
+						<li class="house__mobile-item">
+							<span class="house__mobile-img">
+								<img src="img/svg/hsm-10.svg" alt="">
+							</span>
+							<span>Управление инцидентами</span>
+						</li>
+						<li class="house__mobile-item">
+							<span class="house__mobile-img">
+								<img src="img/svg/hsm-11.svg" alt="">
+							</span>
+							<span>Электроснабжение (ТП, АПР, ДГУ, PDU)</span>
+						</li>
+						<li class="house__mobile-item">
+							<span class="house__mobile-img">
+								<img src="img/svg/hsm-12.svg" alt="">
+							</span>
+							<span>Водоснабжение, водоотведение</span>
+						</li>
+						<li class="house__mobile-item">
+							<span class="house__mobile-img">
+								<img src="img/svg/hsm-13.svg" alt="">
+							</span>
+							<span>Теплоснабжение (ИТП, котельная)</span>
+						</li>
+					</ul>
 				</div>
 			</div>
 		</div>
@@ -863,32 +1042,6 @@
 				<div class="footer__buttons">
 					<a class="btn" href="mailto:info@mfmc.ru">info@mfmc.ru</a>
 					<a class="btn" href="tel:+74951222262">+7 495 122-22-62</a>
-				</div>
-				<div class="footer__social">
-					<a href="#">
-						<svg width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path d="M16.1191 32C24.9557 32 32.1191 24.8366 32.1191 16C32.1191 7.16344 24.9557 0 16.1191 0C7.28258 0 0.119141 7.16344 0.119141 16C0.119141 24.8366 7.28258 32 16.1191 32Z" fill="#29235C" fill-opacity="0.3" />
-							<path fill-rule="evenodd" clip-rule="evenodd" d="M28 16.1286V15.8714C22.6857 15.7 20.26 15.5714 18.3143 13.6857C16.4286 11.74 16.2914 9.31429 16.1286 4H15.8714C15.7 9.31429 15.5714 11.74 13.6857 13.6857C11.74 15.5714 9.31429 15.7086 4 15.8714V16.1286C9.31429 16.3 11.74 16.4286 13.6857 18.3143C15.5714 20.26 15.7086 22.6857 15.8714 28H16.1286C16.3 22.6857 16.4286 20.26 18.3143 18.3143C20.26 16.4286 22.6857 16.2914 28 16.1286Z" fill="white" />
-						</svg>
-					</a>
-					<a href="#">
-						<svg width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path d="M16.1191 32C24.9557 32 32.1191 24.8366 32.1191 16C32.1191 7.16344 24.9557 0 16.1191 0C7.28258 0 0.119141 7.16344 0.119141 16C0.119141 24.8366 7.28258 32 16.1191 32Z" fill="#29235C" fill-opacity="0.3" />
-							<path d="M25.7017 11.3118C25.5879 10.8993 25.3646 10.5231 25.0544 10.2209C24.7441 9.91876 24.3577 9.70114 23.9339 9.58986C22.3736 9.18164 16.1191 9.18164 16.1191 9.18164C16.1191 9.18164 9.86467 9.18164 8.30441 9.58769C7.88035 9.6986 7.49375 9.91611 7.18344 10.2184C6.87313 10.5206 6.65003 10.8969 6.53655 11.3096C6.11914 12.8296 6.11914 15.9998 6.11914 15.9998C6.11914 15.9998 6.11914 19.1701 6.53655 20.6879C6.76646 21.526 7.44503 22.1861 8.30441 22.4098C9.86467 22.818 16.1191 22.818 16.1191 22.818C16.1191 22.818 22.3736 22.818 23.9339 22.4098C24.7955 22.1861 25.4718 21.526 25.7017 20.6879C26.1191 19.1701 26.1191 15.9998 26.1191 15.9998C26.1191 15.9998 26.1191 12.8296 25.7017 11.3118ZM14.1325 18.9095V13.0902L19.3111 15.9781L14.1325 18.9095Z" fill="white" />
-						</svg>
-					</a>
-					<a href="#">
-						<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path d="M16 32C24.8366 32 32 24.8366 32 16C32 7.16344 24.8366 0 16 0C7.16344 0 0 7.16344 0 16C0 24.8366 7.16344 32 16 32Z" fill="#29235C" fill-opacity="0.3" />
-							<path d="M7.32169 15.6536L22.7483 9.70561C23.4643 9.44695 24.0896 9.88028 23.8576 10.9629L23.859 10.9616L21.2323 23.3363C21.0376 24.2136 20.5163 24.4269 19.787 24.0136L15.787 21.0656L13.8576 22.9243C13.6443 23.1376 13.4643 23.3176 13.051 23.3176L13.335 19.2469L20.7483 12.5496C21.071 12.2656 20.6763 12.1056 20.251 12.3883L11.0896 18.1563L7.14035 16.9243C6.28302 16.6523 6.26435 16.0669 7.32169 15.6536Z" fill="white" />
-						</svg>
-					</a>
-					<a href="#">
-						<svg width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path d="M16.1191 32C24.9557 32 32.1191 24.8366 32.1191 16C32.1191 7.16344 24.9557 0 16.1191 0C7.28258 0 0.119141 7.16344 0.119141 16C0.119141 24.8366 7.28258 32 16.1191 32Z" fill="#29235C" fill-opacity="0.3" />
-							<path d="M23.7523 12.6772C23.8641 12.2865 23.7523 12 23.2237 12H21.4727C21.0271 12 20.8235 12.2479 20.7117 12.5201C20.7117 12.5201 19.8214 14.8046 18.5599 16.2858C18.1526 16.7169 17.9666 16.853 17.7446 16.853C17.6336 16.853 17.4723 16.7169 17.4723 16.3262V12.6772C17.4723 12.2084 17.3438 12 16.9725 12H14.221C13.9431 12 13.7755 12.2168 13.7755 12.4235C13.7755 12.8671 14.4062 12.9696 14.4709 14.2198V16.9319C14.4709 17.526 14.3695 17.6343 14.1459 17.6343C13.5527 17.6343 12.1091 15.3415 11.2523 12.7167C11.0854 12.2067 10.917 12.0008 10.4698 12.0008H8.71958C8.21895 12.0008 8.11914 12.2487 8.11914 12.5209C8.11914 13.0099 8.7124 15.4297 10.8826 18.63C12.3294 20.8153 14.3663 22 16.222 22C17.3342 22 17.4716 21.737 17.4716 21.2833V19.6315C17.4716 19.1055 17.5777 18.9997 17.9299 18.9997C18.1886 18.9997 18.6341 19.1375 19.6729 20.1902C20.8594 21.4387 21.0559 21.9992 21.7226 21.9992H23.4728C23.9727 21.9992 24.2226 21.7362 24.0789 21.2169C23.9216 20.7002 23.3546 19.9482 22.6025 19.0585C22.1937 18.551 21.5828 18.0049 21.3968 17.7318C21.1373 17.3798 21.2124 17.2243 21.3968 16.9118C21.3968 16.9118 23.5303 13.7518 23.7523 12.6772Z" fill="white" />
-						</svg>
-					</a>
 				</div>
 			</div>
 		</div>
@@ -911,6 +1064,32 @@
 								<a href="tel:+74951222262">+7 495 122-22-62</a>
 							</p>
 						</div>
+					</div>
+					<div class="footer__social">
+						<a href="#">
+							<svg width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M16.1191 32C24.9557 32 32.1191 24.8366 32.1191 16C32.1191 7.16344 24.9557 0 16.1191 0C7.28258 0 0.119141 7.16344 0.119141 16C0.119141 24.8366 7.28258 32 16.1191 32Z" fill="#29235C" fill-opacity="0.3" />
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M28 16.1286V15.8714C22.6857 15.7 20.26 15.5714 18.3143 13.6857C16.4286 11.74 16.2914 9.31429 16.1286 4H15.8714C15.7 9.31429 15.5714 11.74 13.6857 13.6857C11.74 15.5714 9.31429 15.7086 4 15.8714V16.1286C9.31429 16.3 11.74 16.4286 13.6857 18.3143C15.5714 20.26 15.7086 22.6857 15.8714 28H16.1286C16.3 22.6857 16.4286 20.26 18.3143 18.3143C20.26 16.4286 22.6857 16.2914 28 16.1286Z" fill="white" />
+							</svg>
+						</a>
+						<a href="#">
+							<svg width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M16.1191 32C24.9557 32 32.1191 24.8366 32.1191 16C32.1191 7.16344 24.9557 0 16.1191 0C7.28258 0 0.119141 7.16344 0.119141 16C0.119141 24.8366 7.28258 32 16.1191 32Z" fill="#29235C" fill-opacity="0.3" />
+								<path d="M25.7017 11.3118C25.5879 10.8993 25.3646 10.5231 25.0544 10.2209C24.7441 9.91876 24.3577 9.70114 23.9339 9.58986C22.3736 9.18164 16.1191 9.18164 16.1191 9.18164C16.1191 9.18164 9.86467 9.18164 8.30441 9.58769C7.88035 9.6986 7.49375 9.91611 7.18344 10.2184C6.87313 10.5206 6.65003 10.8969 6.53655 11.3096C6.11914 12.8296 6.11914 15.9998 6.11914 15.9998C6.11914 15.9998 6.11914 19.1701 6.53655 20.6879C6.76646 21.526 7.44503 22.1861 8.30441 22.4098C9.86467 22.818 16.1191 22.818 16.1191 22.818C16.1191 22.818 22.3736 22.818 23.9339 22.4098C24.7955 22.1861 25.4718 21.526 25.7017 20.6879C26.1191 19.1701 26.1191 15.9998 26.1191 15.9998C26.1191 15.9998 26.1191 12.8296 25.7017 11.3118ZM14.1325 18.9095V13.0902L19.3111 15.9781L14.1325 18.9095Z" fill="white" />
+							</svg>
+						</a>
+						<a href="#">
+							<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M16 32C24.8366 32 32 24.8366 32 16C32 7.16344 24.8366 0 16 0C7.16344 0 0 7.16344 0 16C0 24.8366 7.16344 32 16 32Z" fill="#29235C" fill-opacity="0.3" />
+								<path d="M7.32169 15.6536L22.7483 9.70561C23.4643 9.44695 24.0896 9.88028 23.8576 10.9629L23.859 10.9616L21.2323 23.3363C21.0376 24.2136 20.5163 24.4269 19.787 24.0136L15.787 21.0656L13.8576 22.9243C13.6443 23.1376 13.4643 23.3176 13.051 23.3176L13.335 19.2469L20.7483 12.5496C21.071 12.2656 20.6763 12.1056 20.251 12.3883L11.0896 18.1563L7.14035 16.9243C6.28302 16.6523 6.26435 16.0669 7.32169 15.6536Z" fill="white" />
+							</svg>
+						</a>
+						<a href="#">
+							<svg width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M16.1191 32C24.9557 32 32.1191 24.8366 32.1191 16C32.1191 7.16344 24.9557 0 16.1191 0C7.28258 0 0.119141 7.16344 0.119141 16C0.119141 24.8366 7.28258 32 16.1191 32Z" fill="#29235C" fill-opacity="0.3" />
+								<path d="M23.7523 12.6772C23.8641 12.2865 23.7523 12 23.2237 12H21.4727C21.0271 12 20.8235 12.2479 20.7117 12.5201C20.7117 12.5201 19.8214 14.8046 18.5599 16.2858C18.1526 16.7169 17.9666 16.853 17.7446 16.853C17.6336 16.853 17.4723 16.7169 17.4723 16.3262V12.6772C17.4723 12.2084 17.3438 12 16.9725 12H14.221C13.9431 12 13.7755 12.2168 13.7755 12.4235C13.7755 12.8671 14.4062 12.9696 14.4709 14.2198V16.9319C14.4709 17.526 14.3695 17.6343 14.1459 17.6343C13.5527 17.6343 12.1091 15.3415 11.2523 12.7167C11.0854 12.2067 10.917 12.0008 10.4698 12.0008H8.71958C8.21895 12.0008 8.11914 12.2487 8.11914 12.5209C8.11914 13.0099 8.7124 15.4297 10.8826 18.63C12.3294 20.8153 14.3663 22 16.222 22C17.3342 22 17.4716 21.737 17.4716 21.2833V19.6315C17.4716 19.1055 17.5777 18.9997 17.9299 18.9997C18.1886 18.9997 18.6341 19.1375 19.6729 20.1902C20.8594 21.4387 21.0559 21.9992 21.7226 21.9992H23.4728C23.9727 21.9992 24.2226 21.7362 24.0789 21.2169C23.9216 20.7002 23.3546 19.9482 22.6025 19.0585C22.1937 18.551 21.5828 18.0049 21.3968 17.7318C21.1373 17.3798 21.2124 17.2243 21.3968 16.9118C21.3968 16.9118 23.5303 13.7518 23.7523 12.6772Z" fill="white" />
+							</svg>
+						</a>
 					</div>
 				</div>
 				<div class="footer__bottom-inner">
