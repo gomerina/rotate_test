@@ -5,7 +5,6 @@ $(document).ready(function () {
             let sliders = elem.querySelector('.slider');
             let path = elem.getAttribute('data-path')
             let image = elem.querySelector('.jsSrc')
-            console.log(image)
             if (sliders) {
                 let inputMin = elem.querySelector('.min');
                 let inputMax = elem.querySelector('.max');
@@ -26,7 +25,6 @@ $(document).ready(function () {
                     })
                 sliders.noUiSlider.on('update', function (values, handle, unencoded) {
                     inputs[handle].value = parseInt(values[handle]);
-                    console.log(Math.floor(values[handle]))
                     image.setAttribute('src', `${path}/${Math.floor(values[handle])}.png`)
                 });
 

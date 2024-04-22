@@ -762,6 +762,7 @@ video {
   background-position: center;
   top: -13px;
   left: 7px;
+  cursor: pointer;
 }
 
 .slider {
